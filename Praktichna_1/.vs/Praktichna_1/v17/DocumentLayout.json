@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{EC26D79F-0A4B-48C8-B3AC-0A320FD0348A}|Praktichna_1.vcxproj|D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Praktichna_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EC26D79F-0A4B-48C8-B3AC-0A320FD0348A}|Praktichna_1.vcxproj|solutionrelative:Praktichna_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC26D79F-0A4B-48C8-B3AC-0A320FD0348A}|Praktichna_1.vcxproj|D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Header.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC26D79F-0A4B-48C8-B3AC-0A320FD0348A}|Praktichna_1.vcxproj|solutionrelative:Header.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC26D79F-0A4B-48C8-B3AC-0A320FD0348A}|Praktichna_1.vcxproj|D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC26D79F-0A4B-48C8-B3AC-0A320FD0348A}|Praktichna_1.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +32,35 @@
               "RelativeDocumentMoniker": "Praktichna_1.cpp",
               "ToolTip": "D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Praktichna_1.cpp",
               "RelativeToolTip": "Praktichna_1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-01T17:26:02.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Header.h",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Header.h",
+              "RelativeDocumentMoniker": "Header.h",
+              "ToolTip": "D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Header.h",
+              "RelativeToolTip": "Header.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T17:33:22.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Source.cpp",
+              "RelativeDocumentMoniker": "Source.cpp",
+              "ToolTip": "D:\\C\u002B\u002B\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\u041E\u041E\u041F\\P_1\\Practice_SilyukDmitry_KN-323\\Praktichna_1\\Source.cpp",
+              "RelativeToolTip": "Source.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-01T17:37:52.957Z",
               "EditorCaption": ""
             }
           ]
