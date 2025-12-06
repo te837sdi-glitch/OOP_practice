@@ -1,7 +1,28 @@
 ﻿#include <iostream>
 using namespace std;
 
-class Student
+class Abiturient
+{
+private:
+    int rik;
+    int nomer;
+    int pin;
+public:
+    Abiturient() 
+    {
+        this->rik = 0;
+        this->nomer = 0;
+        this->pin = 0;
+    }
+    Abiturient(int rik, int nomer, int pin)
+    {
+        this->rik = rik;
+        this->nomer = nomer;
+        this->pin = pin;
+    }
+};
+
+class Student : public Abiturient
 {
 private:
     int id;
@@ -10,7 +31,7 @@ private:
     string paternal;
     int phone;
 public:
-    Student()
+    Student() : Abiturient()
     {
         id = 0;
         name = "";
@@ -18,7 +39,7 @@ public:
         paternal = "";
         phone = 0;
     }
-    Student(int id, string name, string surname, string paternal, int phone)
+    Student(int id, string name, string surname, string paternal, int phone, int rik, int nomer, int pin) : Abiturient(rik, nomer, pin)
     {
         this->id = id;
         this->name = name;
