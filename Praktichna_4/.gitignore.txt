@@ -1,0 +1,9 @@
+*.exe
+*.obj
+*.log
+*.user
+*.VC.db
+*.ilk
+*.pdb
+Debug/
+Release/
