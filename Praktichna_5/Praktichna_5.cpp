@@ -1,5 +1,8 @@
 ﻿#include <iostream>
+#include <string>
+
 using namespace std;
+
 
 class Abiturient
 {
@@ -21,13 +24,16 @@ public:
         this->pin = pin;
     }
 
+    
     virtual void fill_data() = 0;
     virtual void display_info() = 0;
+
+    virtual ~Abiturient() {}
 };
 
 class Student : public Abiturient
 {
-private:
+protected:
     int id;
     string name;
     string surname;
@@ -51,42 +57,146 @@ public:
         this->phone = phone;
     }
 
+    
     void fill_data() override
     {
-        
-        cout << "  Введіть рік: ";
+      
+        cout << "  [База] Введіть рік вступу: ";
         cin >> rik;
-        cout << "  Введіть номер: ";
+        cout << "  [База] Введіть номер справи: ";
         cin >> nomer;
-        cout << "  Введіть PIN: ";
+        cout << "  [База] Введіть PIN: ";
         cin >> pin;
 
-       
-        cout << "  Введіть ID студента: ";
+        
+        cout << "  [Student] Введіть ID студента: ";
         cin >> id;
-        cout << "  Введіть ім'я: ";
+        cout << "  [Student] Введіть ім'я: ";
         cin >> name;
-        cout << "  Введіть прізвище: ";
+        cout << "  [Student] Введіть прізвище: ";
         cin >> surname;
-        cout << "  Введіть по-батькові: ";
+        cout << "  [Student] Введіть по-батькові: ";
         cin >> paternal;
-        cout << "  Введіть телефон (ціле число): ";
+        cout << "  [Student] Введіть телефон: ";
         cin >> phone;
     }
 
     void display_info() override
     {
-        cout << "  Тип: Student" << endl;
+        cout << "  *** Тип: Student (Студент) ***" << endl;
         cout << "  Рік/Номер/PIN (Абітурієнт): " << rik << "/" << nomer << "/" << pin << endl;
         cout << "  ID: " << id << endl;
         cout << "  ПІБ: " << surname << " " << name << " " << paternal << endl;
         cout << "  Телефон: " << phone << endl;
     }
+
+    virtual ~Student() {}
+};
+
+class Abiturient_Entrant : public Abiturient
+{
+protected:
+    int sertificat_nomer;
+    double zno_average;
+    string desired_specialty;
+public:
+    Abiturient_Entrant() : Abiturient()
+    {
+        sertificat_nomer = 0;
+        zno_average = 0.0;
+        desired_specialty = "";
+    }
+
+    
+    void fill_data() override
+    {
+        
+        cout << "  [База] Введіть рік подачі: ";
+        cin >> rik;
+        cout << "  [База] Введіть номер заяви: ";
+        cin >> nomer;
+        cout << "  [База] Введіть PIN: ";
+        cin >> pin;
+
+       
+        cout << "  [Entrant] Введіть номер сертифіката ЗНО: ";
+        cin >> sertificat_nomer;
+        cout << "  [Entrant] Введіть середній бал ЗНО: ";
+        cin >> zno_average;
+        cout << "  [Entrant] Введіть бажану спеціальність: ";
+        cin >> desired_specialty;
+    }
+
+    void display_info() override
+    {
+        cout << "  *** Тип: Abiturient_Entrant (Вступник) ***" << endl;
+        cout << "  Рік/Номер/PIN (Абітурієнт): " << rik << "/" << nomer << "/" << pin << endl;
+        cout << "  Номер сертифіката ЗНО: " << sertificat_nomer << endl;
+        cout << "  Середній бал ЗНО: " << zno_average << endl;
+        cout << "  Бажана спеціальність: " << desired_specialty << endl;
+    }
+
+    virtual ~Abiturient_Entrant() {}
 };
 
 
-int main()
+void show_menu()
 {
-    std::cout << "Hello World!\n";
+    cout << "\nОберіть клас для створення об'єкта (введіть номер):" << endl;
+    cout << "1. Student (Студент)" << endl;
+    cout << "2. Abiturient_Entrant (Вступник)" << endl;
+    cout << "Ваш вибір: ";
 }
 
+int main()
+{
+    
+    const int ARRAY_SIZE = 5;
+    Abiturient* abiturients[ARRAY_SIZE];
+    int choice;
+
+   
+    cout << "--- Заповнення масиву об'єктами похідних класів (розмір: " << ARRAY_SIZE << ") ---" << endl;
+
+    for (int i = 0; i < ARRAY_SIZE; ++i)
+    {
+        cout << "\nСтворення об'єкта #" << i + 1 << ":";
+        show_menu(); 
+
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            abiturients[i] = new Student();
+            cout << "Введіть дані для Student #" << i + 1 << endl;
+            abiturients[i]->fill_data();
+            break;
+        case 2:
+            abiturients[i] = new Abiturient_Entrant();
+            cout << "Введіть дані для Abiturient_Entrant #" << i + 1 << endl;
+            abiturients[i]->fill_data();
+            break;
+        default:
+            cout << "Невірний вибір. Створено Student за замовчуванням." << endl;
+            abiturients[i] = new Student();
+            cout << "Введіть дані для Student #" << i + 1 << endl;
+            abiturients[i]->fill_data();
+            break;
+        }
+    }
+
+    cout << "\n--- Вивід даних та виклик віртуального методу (display_info) ---" << endl;
+    for (int i = 0; i < ARRAY_SIZE; ++i)
+    {
+        cout << "\nДані об'єкта #" << i + 1 << ":" << endl;
+        abiturients[i]->display_info();
+    }
+
+    for (int i = 0; i < ARRAY_SIZE; ++i)
+    {
+        delete abiturients[i];
+    }
+
+    return 0;
+}
