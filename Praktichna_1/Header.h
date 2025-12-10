@@ -24,7 +24,4 @@ public:
 
 	~Abiturient();
 
-	friend ostream& operator<<(ostream& out, const Abiturient& p);
-	friend istream& operator>>(istream& in, Abiturient& p);
-	bool operator==(const Abiturient& other) const;
 };
