@@ -1,0 +1,3 @@
+﻿  Praktichna_7.cpp
+D:\C++\ПрактикаООП\P_1\Practice_SilyukDmitry_KN-323\Praktichna_7\Praktichna_7.cpp(103,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Praktichna_7.vcxproj -> D:\C++\ПрактикаООП\P_1\Practice_SilyukDmitry_KN-323\Praktichna_7\x64\Debug\Praktichna_7.exe
